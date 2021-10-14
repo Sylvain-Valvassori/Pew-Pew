@@ -1,0 +1,178 @@
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  /* now 1.5rem = 15px */
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Sora-Variable';
+  src: url("/assets/fonts/Sora-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: 'Sora Bold';
+  src: url("/assets/fonts//static/Sora-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Sora ExtraBold';
+  src: url("/assets/fonts//static/Sora-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'Sora ExtraLight';
+  src: url("/assets/fonts//static/Sora-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: 'Sora Light';
+  src: url("/assets/fonts//static/Sora-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Sora Medium';
+  src: url("/assets/fonts//static/Sora-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Sora Regular';
+  src: url("/assets/fonts//static/Sora-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Sora SemiBold';
+  src: url("/assets/fonts//static/Sora-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Sora Thin';
+  src: url("/assets/fonts//static/Sora-Thin.ttf");
+}
+
+:root {
+  --nullColor:   rgb(218, 218, 218);
+  --mainColor:   rgb(254, 200, 89);
+  --secondColor: rgb(67, 181, 160);
+  --accentColor: rgb(250, 68, 140);
+  --lightColor:  rgb(73, 29, 136);
+  --darkColor:   rgb(51, 26, 56);
+}
+
+html {
+  background-color: var(--nullColor);
+  font-family: 'Sora ExtraBold';
+}
+
+body {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 5rem 0;
+  color: var(--darkColor);
+}
+
+.containerCanvas {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 5rem;
+  background-color: var(--secondColor);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+canvas {
+  background-color: var(--lightColor);
+}
+
+.btn {
+  cursor: pointer;
+  margin: 0 0 5rem 0;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--darkColor);
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Sora ExtraBold';
+  text-transform: uppercase;
+  color: var(--darkColor);
+  background-color: var(--nullColor);
+}
+
+.btn:hover {
+  color: var(--mainColor);
+}

@@ -1,0 +1,74 @@
+@import "./libs/reset.scss";
+@import "./libs/fonts.scss";
+
+:root{
+    --nullColor:   rgb(218, 218, 218);
+    --mainColor:   rgb(254, 200, 89);
+    --secondColor: rgb(67, 181, 160);
+    --accentColor: rgb(250, 68, 140);
+    --lightColor:  rgb(73, 29, 136);
+    --darkColor:   rgb(51, 26, 56);
+}
+// var(--white-color);
+
+@mixin flex--center { 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+// @include  flex--center;
+
+html{
+    background-color: var(--nullColor) ; 
+    font-family: 'Sora ExtraBold';
+}
+
+body{
+    @include  flex--center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 600;
+    // text-transform: uppercase;
+    margin: 5rem 0;
+    color: var(--darkColor);
+}
+
+.containerCanvas{
+    @include  flex--center;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 5rem;
+
+    background-color: var(--secondColor);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+canvas{
+    background-color: var(--lightColor);
+}
+
+.btn{
+    cursor: pointer;
+    margin: 0 0 5rem 0;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--darkColor);
+    border-radius: 0.5rem;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Sora ExtraBold';
+    text-transform: uppercase;
+    color: var(--darkColor);
+
+    background-color: var(--nullColor); 
+}
+
+.btn:hover {
+    color:  var(--mainColor); 
+}
