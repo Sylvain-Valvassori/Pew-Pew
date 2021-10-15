@@ -119,7 +119,8 @@
         projectiles.forEach( (projectile, index) => {
             projectile.update()
             
-            if (projectile.y + projectile.radius < 0) {
+            // remove projectile who are off screen
+            if ( projectile.y + projectile.radius < 0 ) {
                 setTimeout(() => {
                     projectiles.splice(index, 1);
                 }, 0);
@@ -133,25 +134,22 @@
             // =====| End Game |=====
 
             const dist = canvas.height - enemy.y;
-            
-                
-           
-                if (dist - enemy.radius < 1){
-                    
-                   lifeCompt = lifeCompt-1;
-                    document.getElementById('lifeCompt').innerHTML=lifeCompt;
 
-                    setTimeout(() => {
-                        enemies.splice(index, 1);
-                    }, 0);
-                       
-                    if (lifeCompt === 0){   
-                        document.getElementById('lifeCompt').innerHTML=lifeCompt;       
-                        cancelAnimationFrame(animationId);
-                        alert('Eng game');
-                    }
+            if (dist - enemy.radius < 1){
+                
+                lifeCompt = lifeCompt-1;
+                document.getElementById('lifeCompt').innerHTML=lifeCompt;
+
+                setTimeout(() => {
+                    enemies.splice(index, 1);
+                }, 0);
                     
-                }
+                if (lifeCompt === 0){   
+                    document.getElementById('lifeCompt').innerHTML=lifeCompt;       
+                    cancelAnimationFrame(animationId);
+                    // alert('Eng game');
+                }  
+            }
             
            
             // =====| detected collision entre projectile et enemy |=====
