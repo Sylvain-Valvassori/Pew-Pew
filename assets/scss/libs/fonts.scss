@@ -1,44 +1,74 @@
+
+@font-face {
+    font-family: "Rosmatika";
+    src: url("/fonts/Rosmatika 400.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Droid";
+    src: url("/fonts/droid-serif-bold.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "P22 Underground";
+    src:    url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Thin.otf")   format("otf") font-weight-thin,
+            url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Medium.otf") format("otf") font-weight-medium,
+            url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Heavy.otf")  format("otf") font-weight-heavy,
+            url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Demi.otf")   format("otf") font-weight-demi,
+            url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Book.otf")   format("otf") font-weight-book;
+}
+
+@font-face {
+    font-family: "P22 Underground";
+    src:    url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Thin.otf")   format("otf") font-weight-thin,
+            url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Medium.otf") format("otf") font-weight-medium,
+            url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Heavy.otf")  format("otf") font-weight-heavy,
+            url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Demi.otf")   format("otf") font-weight-demi,
+            url("/fonts/P22 Underground Pro/P22UndergroundCYPro-Book.otf")   format("otf") font-weight-book;
+}
+
+
 @font-face {
     font-family: 'Sora-Variable';
-    src: url('/assets/fonts/Sora-VariableFont_wght.ttf')  format("truetype");
+    src: url('/fonts/Sora-VariableFont_wght.ttf')  format("ttf");
 }
 
 @font-face {
     font-family: 'Sora-Bold';
-    src: url('/assets/fonts/static/Sora-Bold.ttf'      )  format("truetype");
+    src: url('/fonts/static/Sora-Bold.ttf'      )  format("ttf");
 }
 
 @font-face {
     font-family: 'Sora-ExtraBold';
-    src: url('/assets/fonts/static/Sora-ExtraBold.ttf' )  format("truetype");
+    src: url('/fonts/static/Sora-ExtraBold.ttf' )  format("ttf");
 }
 
 @font-face {
     font-family: 'Sora-ExtraLight';
-    src: url('/assets/fonts/static/Sora-ExtraLight.ttf')  format("truetype");
+    src: url('/fonts/static/Sora-ExtraLight.ttf')  format("ttf");
 }
 
 @font-face {
     font-family: 'Sora-Light';
-    src: url('/assets/fonts/static/Sora-Light.ttf'     )  format("truetype");
+    src: url('/fonts/static/Sora-Light.ttf'     )  format("ttf");
 }
 
 @font-face {
     font-family: 'Sora-Medium';
-    src: url('/assets/fonts/static/Sora-Medium.ttf'    )  format("truetype");
+    src: url('/fonts/static/Sora-Medium.ttf'    )  format("ttf");
 }
 
 @font-face {
     font-family: 'Sora-Regular';
-    src: url('/assets/fonts/static/Sora-Regular.ttf'   )  format("truetype");
+    src: url('/fonts/static/Sora-Regular.ttf'   )  format("ttf");
 }
 
 @font-face {
     font-family: 'Sora-SemiBold';
-    src: url('/assets/fonts/static/Sora-SemiBold.ttf'  )  format("truetype");
+    src: url('/fonts/static/Sora-SemiBold.ttf'  )  format("ttf");
 }
 
 @font-face {
     font-family: 'Sora-Thin';
-    src: url('/assets/fonts/static/Sora-Thin.ttf'      )  format("truetype");
+    src: url('/fonts/static/Sora-Thin.ttf'      )  format("ttf");
 }
