@@ -63,9 +63,9 @@
         draw(){
             
             ctx.beginPath();
-            ctx.fillStyle = this.color;
-            ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
-            ctx.fill();
+                ctx.fillStyle = this.color;
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+                ctx.fill();
             ctx.closePath();
         }
         
@@ -88,9 +88,9 @@
         draw(){
             
             ctx.beginPath();
-            ctx.fillStyle = this.color;
-            ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
-            ctx.fill();
+                ctx.fillStyle = this.color;
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+                ctx.fill();
             ctx.closePath();
         }
         
@@ -134,7 +134,7 @@
         let spawnPos = Math.random() * canvas.width;
 
         return spawnPos < 0 || spawnPos < r ? spawnPos = r
-            : spawnPos > canvas.width - r  ? spawnEnemies = canvas.width - r
+            : spawnPos > canvas.width - r  ? spawnPos = canvas.width - r
             : spawnPos;  
     }
 
