@@ -139,15 +139,16 @@
                 if (dist - enemy.radius < 1){
                     
                    lifeCompt = lifeCompt-1;
-                    console.log('life '+ lifeCompt);
+                    document.getElementById('lifeCompt').innerHTML=lifeCompt;
 
                     setTimeout(() => {
                         enemies.splice(index, 1);
                     }, 0);
                        
-                    if (lifeCompt <= 0){          
-                        alert('Eng game');
+                    if (lifeCompt === 0){   
+                        document.getElementById('lifeCompt').innerHTML=lifeCompt;       
                         cancelAnimationFrame(animationId);
+                        alert('Eng game');
                     }
                     
                 }

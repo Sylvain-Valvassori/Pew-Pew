@@ -47,8 +47,48 @@ td, th {
 }
 
 @font-face {
+  font-family: 'Sora-Variable';
+  src: url("../fonts/Sora-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Bold';
+  src: url("../fonts/static/Sora-Bold.ttf") format("truetype");
+}
+
+@font-face {
   font-family: 'Sora-ExtraBold';
   src: url("../fonts/static/Sora-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-ExtraLight';
+  src: url("../fonts/static/Sora-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Light';
+  src: url("../fonts/static/Sora-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Medium';
+  src: url("../fonts/static/Sora-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Regular';
+  src: url("../fonts/static/Sora-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-SemiBold';
+  src: url("../fonts/static/Sora-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Thin';
+  src: url("../fonts/static/Sora-Thin.ttf") format("truetype");
 }
 
 :root {
@@ -118,9 +158,36 @@ canvas {
   background-color: var(--lightColor);
 }
 
+.nav {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.score {
+  margin: 0 0 5rem 0;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--darkColor);
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Sora-ExtraBold';
+  text-transform: uppercase;
+  color: var(--darkColor);
+  background-color: var(--nullColor);
+}
+
 .btn {
   cursor: pointer;
-  margin: 0 0 5rem 0;
+  margin: 0 0 5rem 5rem;
   padding: 0.8rem 2rem;
   border: 1px solid var(--darkColor);
   border-radius: 0.5rem;
