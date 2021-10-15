@@ -149,7 +149,6 @@ h1 {
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 5rem;
-  background-color: var(--secondColor);
   border-radius: 1rem;
   overflow: hidden;
 }

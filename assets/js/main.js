@@ -4,8 +4,8 @@
 
     const canvas = document.getElementById('canvas');
     const ctx    = canvas.getContext('2d');
-    canvas.width   = 300;
-    canvas.height  = 300;
+    canvas.width   = 400;
+    canvas.height  = 600;
     const shipSize = 20;
     let posY  = canvas.height-shipSize;
     let posX  = canvas.width/2;
