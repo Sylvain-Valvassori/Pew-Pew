@@ -1,62 +1,59 @@
 
 // @font-face {
 //     font-family: 'Sora';
-//     src:    url('/fonts/static/Sora-SemiBold.ttf'  )  format("ttf"),
-//             url('/fonts/static/Sora-Bold.ttf'      )  format("ttf"),
-//             url('/fonts/static/Sora-extraBold.ttf' )  format("ttf"),
-//             url('/fonts/static/Sora-Light.ttf'     )  format("ttf"),
-//             url('/fonts/static/Sora-Medium.ttf'    )  format("ttf"),
-//             url('/fonts/static/Sora-Regular.ttf'   )  format("ttf"),
-//             url('/fonts/static/Sora-Thin.ttf'      )  format("ttf"),
-//             url('/fonts/static/Sora-extraLight.ttf')  format("ttf");
+//     src:    url('/fonts/static/Sora-SemiBold.ttf'  )   format('truetype'),
+//             url('/fonts/static/Sora-Bold.ttf'      )   format('truetype'),
+//             url('/fonts/static/Sora-extraBold.ttf' )   format('truetype'),
+//             url('/fonts/static/Sora-Light.ttf'     )   format('truetype'),
+//             url('/fonts/static/Sora-Medium.ttf'    )   format('truetype'),
+//             url('/fonts/static/Sora-Regular.ttf'   )   format('truetype'),
+//             url('/fonts/static/Sora-Thin.ttf'      )   format('truetype'),
+//             url('/fonts/static/Sora-extraLight.ttf')   format('truetype');
 // }
+
+
+
+@font-face {
+    font-family: 'Sora-Variable';
+    src: url('../fonts/Sora-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Sora-Bold';
+    src: url('../fonts/static/Sora-Bold.ttf') format('truetype');
+}
 
 @font-face {
     font-family: 'Sora-ExtraBold';
     src: url('../fonts/static/Sora-ExtraBold.ttf') format('truetype');
 }
 
-// @font-face {
-//     font-family: 'Sora-Variable';
-//     src: url('/assets/fonts/Sora-VariableFont_wght.ttf')  format("ttf");
-// }
+@font-face {
+    font-family: 'Sora-ExtraLight';
+    src: url('../fonts/static/Sora-ExtraLight.ttf') format('truetype');
+}
 
-// @font-face {
-//     font-family: 'Sora-Bold';
-//     src: url('/assets/fonts/static/Sora-Bold.ttf'      )  format("ttf");
-// }
+@font-face {
+    font-family: 'Sora-Light';
+    src: url('../fonts/static/Sora-Light.ttf') format('truetype');
+}
 
-// @font-face {
-//     font-family: Sora-ExtraBold;
-//     src: url('/fonts/static/Sora-ExtraBold.ttf');
-// }
+@font-face {
+    font-family: 'Sora-Medium';
+    src: url('../fonts/static/Sora-Medium.ttf') format('truetype');
+}
 
-// @font-face {
-//     font-family: 'Sora-ExtraLight';
-//     src: url('/assets/fonts/static/Sora-ExtraLight.ttf')  format("ttf");
-// }
+@font-face {
+    font-family: 'Sora-Regular';
+    src: url('../fonts/static/Sora-Regular.ttf') format('truetype');
+}
 
-// @font-face {
-//     font-family: 'Sora-Light';
-//     src: url('/assets/fonts/static/Sora-Light.ttf'     )  format("ttf");
-// }
+@font-face {
+    font-family: 'Sora-SemiBold';
+    src: url('../fonts/static/Sora-SemiBold.ttf') format('truetype');
+}
 
-// @font-face {
-//     font-family: 'Sora-Medium';
-//     src: url('/assets/fonts/static/Sora-Medium.ttf'    )  format("ttf");
-// }
-
-// @font-face {
-//     font-family: 'Sora-Regular';
-//     src: url('/assets/fonts/static/Sora-Regular.ttf'   )  format("ttf");
-// }
-
-// @font-face {
-//     font-family: 'Sora-SemiBold';
-//     src: url('/assets/fonts/static/Sora-SemiBold.ttf'  )  format("ttf");
-// }
-
-// @font-face {
-//     font-family: 'Sora-Thin';
-//     src: url('/assets/fonts/static/Sora-Thin.ttf'      )  format("ttf");
-// }
+@font-face {
+    font-family: 'Sora-Thin';
+    src: url('../fonts/static/Sora-Thin.ttf') format('truetype');
+}

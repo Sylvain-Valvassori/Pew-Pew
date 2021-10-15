@@ -10,6 +10,9 @@
     let posY  = canvas.height-shipSize;
     let posX  = canvas.width/2;
 
+    let lifeCompt = 3;
+
+
     const projectiles = [];
     const enemies = [];
 
@@ -55,7 +58,7 @@
         constructor( posX, velocity ){
             this.x = posX;
             this.y = posY - shipSize;
-            this.r = 2;
+            this.radius = 2;
             this.v = velocity;
             this.color = secondColor;
         }
@@ -64,7 +67,7 @@
             
             ctx.beginPath();
                 ctx.fillStyle = this.color;
-                ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
                 ctx.fill();
             ctx.closePath();
         }
@@ -80,7 +83,7 @@
         constructor( posX, posY, velocity, radius ){
             this.x = posX;
             this.y = posY;
-            this.r = radius;
+            this.radius = radius;
             this.v = velocity;
             this.color = mainColor;
         }
@@ -89,7 +92,7 @@
             
             ctx.beginPath();
                 ctx.fillStyle = this.color;
-                ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
                 ctx.fill();
             ctx.closePath();
         }
@@ -104,38 +107,86 @@
                             =====| Setup Fonctions |=====
 =====================================================================================*/
 
+    let animationId
+
     function animate() {
-        requestAnimationFrame(animate);
+        animationId = requestAnimationFrame(animate);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         const ship= new Ship(posX);
         ship.draw();
         
-        projectiles.forEach( e => e.update());
-        enemies.forEach( e => e.update());
+        projectiles.forEach( (projectile, index) => {
+            projectile.update()
+            
+            if (projectile.y + projectile.radius < 0) {
+                setTimeout(() => {
+                    projectiles.splice(index, 1);
+                }, 0);
+            }
+        });
+        
+        
+        enemies.forEach( (enemy, index )=> {
+            enemy.update()
+        
+            // =====| End Game |=====
 
+            const dist = canvas.height - enemy.y;
+            
+                
+           
+                if (dist - enemy.radius < 1){
+                    
+                   lifeCompt = lifeCompt-1;
+                    console.log('life '+ lifeCompt);
+
+                    setTimeout(() => {
+                        enemies.splice(index, 1);
+                    }, 0);
+                       
+                    if (lifeCompt <= 0){          
+                        alert('Eng game');
+                        cancelAnimationFrame(animationId);
+                    }
+                    
+                }
+            
+           
+            // =====| detected collision entre projectile et enemy |=====
+
+            projectiles.forEach((projectile, projectileIndex) => { 
+                const dist = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y);
+                
+                if (dist - enemy.radius - projectile.radius < 1){
+                    
+                    setTimeout(() => {
+                        enemies.splice(index, 1);
+                        projectiles.splice(projectileIndex, 1);
+                    }, 0);
+                }
+             })
+        })
     }
 
     function spawnEnemies() {
         setInterval( () => {
-            const radiusEnemies = (Math.random() * (20 - 5) + 5);
-            const posX = enemiesPositionSpwan(radiusEnemies);
-            const posY = 0 - radiusEnemies;
+            const radius = (Math.random() * (20 - 5) + 5);
+            const posX = enemiesPositionSpwan(radius);
+            const posY = 0 - radius;
             const velocity = 0.5;
-            enemies.push( new Enemy(posX, posY, velocity, radiusEnemies) );
-
-
+            enemies.push( new Enemy(posX, posY, velocity, radius) );
         }, 3500)
     }
 
-    function enemiesPositionSpwan (radiusEnemies) {
+    function enemiesPositionSpwan (radius) {
         
-        let r = radiusEnemies;
+        let r = radius;
         let spawnPos = Math.random() * canvas.width;
 
         return spawnPos < 0 || spawnPos < r ? spawnPos = r
-            : spawnPos > canvas.width - r  ? spawnPos = canvas.width - r
-            : spawnPos;  
+             : spawnPos > canvas.width - r  ? spawnPos = canvas.width - r
+             : spawnPos;  
     }
 
 /*=====================================================================================
@@ -143,7 +194,6 @@
 =====================================================================================*/
 
     addEventListener('keydown', (e) => {
-        
         if (e.key == 'ArrowLeft' && posX >=(shipSize/2)) {
             posX -= 5;
         }
@@ -165,3 +215,40 @@
    
     animate();
     spawnEnemies();
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+if (lifeCompt != 0){          
+    lifeCompt = lifeCompt-1;
+    console.log('life '+ lifeCompt);
+
+}else{
+    console.log('end game');
+    cancelAnimationFrame(animationId);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
